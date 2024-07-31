@@ -9,31 +9,22 @@ function App() {
   });
 
   function handleInput(value) {
-    setInput((prevInput) => {
-      let newLeftInput;
-      if (prevInput.operand === "") {
-        newLeftInput =
-          prevInput.leftInput === 0
-            ? value.toString()
-            : prevInput.leftInput.toString() + value.toString();
-      } else {
-        newLeftInput = prevInput.leftInput;
-        let newRightInput =
-          prevInput.rightInput === ""
-            ? value.toString()
-            : prevInput.rightInput.toString() + value.toString();
+    setInput(prevInput => {
+        let targetInput = prevInput.operand === "" ? 'leftInput' : 'rightInput';
+        let currentValue = prevInput[targetInput].toString();
+        
+        let newValue;
+        if (value === '.') {
+            newValue = currentValue.includes('.') ? currentValue : currentValue + '.';
+        } else {
+            newValue = currentValue === '0' ? value.toString() : currentValue + value.toString();
+        }
         return {
-          ...prevInput,
-          rightInput: newRightInput,
+            ...prevInput,
+            [targetInput]: newValue
         };
-      }
-
-      return {
-        ...prevInput,
-        leftInput: Number(newLeftInput),
-      };
     });
-  }
+}
   function reset() {
     setInput((prevInput) => ({
       ...prevInput,
