@@ -30,7 +30,7 @@ function App() {
 
       return {
         ...prevInput,
-        leftInput: parseFloat(newLeftInput),
+        leftInput: Number(newLeftInput),
       };
     });
   }
@@ -87,7 +87,7 @@ function App() {
   }
   return (
     <div className="flex flex-col items-center mx-20 lg:mx-[35rem] pt-10">
-      <h1 className="w-full text-white bg-gray-500 text-end text-4xl py-4">
+      <h1 className="w-full text-white bg-gray-500 text-end text-5xl py-4 pr-3">
         {input.rightInput === "" ? input.leftInput : input.rightInput}
       </h1>
 
