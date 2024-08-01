@@ -163,7 +163,7 @@ function App() {
           </div>
         </div>
         <div className="row-span-5 col-start-4">
-          <div className="grid grid-cols-1 grid-rows-5 h-[32rem] text-center bg-orange-400 text-white">
+          <div className="grid grid-cols-1 grid-rows-5 h-[32rem] text-center bg-green-700 text-white">
             <button
               onClick={() => handleOperation("/")}
               className="border border-black"
