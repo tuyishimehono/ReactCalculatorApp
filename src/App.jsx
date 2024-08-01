@@ -77,14 +77,14 @@ function App() {
     }));
   }
   return (
-    <div className="m-auto w-[35rem] pt-10">
+    <div className="mx-auto w-[30rem] pt-10">
       <h1 className="w-full text-white bg-gray-500 text-end text-5xl py-4 pr-3">
         {input.rightInput === "" ? input.leftInput : input.rightInput}
       </h1>
 
       <div className="grid grid-cols-4 grid-rows-5 gap-0 w-full text-4xl font-semibold">
         <div className="col-span-3 row-span-5">
-          <div className="grid grid-cols-3 grid-rows-5 h-[32rem] text-center bg-zinc-300">
+          <div className="grid grid-cols-3 grid-rows-5 h-[25rem] text-center bg-zinc-300">
             <button onClick={reset} className="border border-black">
               AC
             </button>
@@ -163,7 +163,7 @@ function App() {
           </div>
         </div>
         <div className="row-span-5 col-start-4">
-          <div className="grid grid-cols-1 grid-rows-5 h-[32rem] text-center bg-green-700 text-white">
+          <div className="grid grid-cols-1 grid-rows-5 h-[25rem] text-center bg-green-700 text-white">
             <button
               onClick={() => handleOperation("/")}
               className="border border-black"
