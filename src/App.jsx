@@ -77,7 +77,7 @@ function App() {
     }));
   }
   return (
-    <div className="mx-auto w-[35rem] pt-10">
+    <div className="m-auto w-[35rem] pt-10">
       <h1 className="w-full text-white bg-gray-500 text-end text-5xl py-4 pr-3">
         {input.rightInput === "" ? input.leftInput : input.rightInput}
       </h1>
